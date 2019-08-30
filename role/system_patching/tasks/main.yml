@@ -52,9 +52,7 @@
 
   - name: Email notification after patching
     include_tasks: send_email_after.yml
-    when: "'IANA_Servers' not in group_names"
     tags: email_after
 
   - name: Write logfile
     include_tasks: save_log.yml
-    when: "'IANA_Servers' in group_names"
