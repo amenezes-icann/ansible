@@ -1,6 +1,0 @@
----
-service: "{{ ansible_local.preferences.service_info.icann_service if ansible_local.preferences.service_info.icann_service is defined else
-'service-undefined' }}"
-recipient_email: "{{ 'aline.menezes@icann.org' if ansible_local.preferences.service_info.notification_email is not defined
-or ansible_local.preferences.service_info.notification_email == '[]' else
-ansible_local.preferences.service_info.notification_email }}"
